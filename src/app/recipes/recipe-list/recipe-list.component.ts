@@ -11,13 +11,13 @@ export class RecipeListComponent implements OnInit {
     @Output() recipeWasSelected = new EventEmitter<Recipe>();
 recipes:Recipe[]=[
     new Recipe('A Test Recipe','This is simply a test','https://www.maxpixel.net/images/apple-touch-icon-57x57.png'),
-    new Recipe('A Test Recipe','This is simply a test','https://www.maxpixel.net/images/apple-touch-icon-57x57.png')
+    new Recipe('A Test Recipe1','This is simply a test1','https://www.maxpixel.net/images/apple-touch-icon-57x57.png')
 ];
   constructor() { }
 
   ngOnInit() {
   }
-    onRecipeSelected(recipe: Recipe){
-        this.recipeWasSelected.emit(recipe);
-    }
+   onRecipeSelected(recipe: Recipe){
+      this.recipeWasSelected.emit(recipe);
+   }
 }
